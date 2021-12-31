@@ -1182,7 +1182,7 @@ function Library:CreateWindow(Data)
 
                 Data.Color = SetColor or Data.Color;
 
-                Library.Flags[Data.Flag] = Data.Color;
+                Library.Flags[Data.Flag] = SetColor;
 
                 local ColorPickerObject = Library:Create("TextButton", {
                     Parent = SelectedPage.Page;
