@@ -385,7 +385,7 @@ function Esp:EspCharacter(Model, Text, Color)
         Visible = false;
         Color = Color;
         Filled = false;
-        Thickness = 1;
+        Thickness = 3;
         Transparency = 1;
     });
     local Text = Esp:Create("Text", {
