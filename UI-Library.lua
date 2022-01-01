@@ -461,7 +461,7 @@ function Library:CreateWindow(Data)
                 Position = UDim2.new(0.112499997, 0, 0, 0);
                 Size = UDim2.new(0, 426, 0, 43);
                 Font = Enum.Font.Gotham;
-                Text = Data.Title .. " | discord.gg/EAEtf82KuJ";
+                Text = Data.Title .. " | .gg/EAEtf82KuJ";
                 TextColor3 = Color3.fromRGB(255, 255, 255);
                 TextSize = 14.000;
                 TextXAlignment = Enum.TextXAlignment.Left;
