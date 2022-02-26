@@ -461,7 +461,7 @@ function Library:CreateWindow(Data)
                 Position = UDim2.new(0.112499997, 0, 0, 0);
                 Size = UDim2.new(0, 426, 0, 43);
                 Font = Enum.Font.Gotham;
-                Text = _G.ShowInvite and Data.Title .. " | discord.gg/EAEtf82KuJ" or Data.Title;
+                Text = not _G.DisableInvite and Data.Title .. " | discord.gg/EAEtf82KuJ" or Data.Title;
                 TextColor3 = Color3.fromRGB(255, 255, 255);
                 TextSize = 14.000;
                 TextXAlignment = Enum.TextXAlignment.Left;
