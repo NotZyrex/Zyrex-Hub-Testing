@@ -447,6 +447,8 @@ function Esp:EspCharacter(Model, Text, Color)
                                 Tracer.Visible = true;
                                 Tracer.From = Vector2.new(Services.Workspace.CurrentCamera.ViewportSize.X / 2, Services.Workspace.CurrentCamera.ViewportSize.Y / 1.2);
                                 Tracer.To = Vector2.new(HeadPos.X, HeadPos.Y);
+                            else
+                                Tracer.Visible = false;
                             end
                         else
                             Text.Visible = false;
