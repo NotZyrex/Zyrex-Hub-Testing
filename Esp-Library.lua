@@ -139,7 +139,7 @@ function Esp:GetClosestCharacter(Max)
         if v ~= Esp:GetLocalPlayer() and Esp:GetCharacter(v) then
             local Head = game.FindFirstChild(Esp:GetCharacter(v), "Head");
             if Head then
-                local Pos, Vis = Camera.WorldToScreenPoint(Camera, Head.Position);
+                local Pos, Vis = Camera.WorldToViewportPoint(Camera, Head.Position);
                 if Vis then
                     local Distance = (Vector2.new(Pos.X, Pos.Y) - Vector2.new(Mouse.X, Mouse.Y)).Magnitude;
                     if Distance < Max then
