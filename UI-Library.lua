@@ -660,6 +660,8 @@ function Library:CreateWindow(Data)
                     end);
                     pcall(Data.Callback)
                 end);
+
+                return Button;
             end;
 
             --// Toggle:
