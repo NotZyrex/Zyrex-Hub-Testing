@@ -286,6 +286,7 @@ function Esp:EspPart(Object, Text)
     local Cube = {};
     local Data = {};
     local OnScreen;
+    local Connection;
 
     for i = 1, 6 do
         local _Drawing = Esp:Create("Quad", {
@@ -316,8 +317,6 @@ function Esp:EspPart(Object, Text)
             v:Remove();
         end;
     end;
-
-    local Connection;
 
     local function Update()
         Connection = Services.RunService.RenderStepped:Connect(function()
