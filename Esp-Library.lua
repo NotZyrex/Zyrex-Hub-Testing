@@ -285,6 +285,7 @@ end;
 function Esp:EspPart(Object, Text)
     local Cube = {};
     local Data = {};
+    local Saved = {};
     local OnScreen;
     local Connection;
 
@@ -305,6 +306,7 @@ function Esp:EspPart(Object, Text)
             for i,v in pairs(Table) do
                 for _i,_v in pairs(Cube) do
                     _v[i] = v;
+                    Saved[i] = v;
                 end;
             end;
         end;
@@ -364,6 +366,9 @@ function Esp:EspPart(Object, Text)
                 Cube[6].PointB = Vector2.new(Top[1].X, Top[1].Y);
                 Cube[6].PointC = Vector2.new(Bottom[1].X, Bottom[1].Y);
                 Cube[6].PointD = Vector2.new(Bottom[4].X, Bottom[4].Y);
+                for i,v in pairs(Cube) do
+                    v.Visible = Saved["Visible"] or false
+                end;
             else
                 for i,v in pairs(Cube) do
                     v.Visible = false;
