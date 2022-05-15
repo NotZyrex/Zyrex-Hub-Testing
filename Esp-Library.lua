@@ -302,13 +302,13 @@ function Esp:EspPart(Object, Text)
     end;
 
     function Data:Change(Table)
-        if OnScreen then
-            for i,v in pairs(Table) do
+        for i,v in pairs(Table) do
+            if OnScreen then
                 for _i,_v in pairs(Cube) do
                     _v[i] = v;
-                    Saved[i] = v;
                 end;
-            end;
+            end
+            Saved[i] = v;
         end;
     end;
 
